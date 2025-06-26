@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIT Application Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/r7R8ewU1Wqc?si=Ih8CDNO9juxDcxGs"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <img src="MIT-Logo.png" alt="MIT Logo" width="650">
+    <div><h1>Application Form</h1>
+    <video src="Welcome to MIT.mp4" controls muted height = "200">Welcome to MIT</video> </div>
+    <form action="">
+        <div><label for="username"></label>
+            Name : <input type="text" name="Username" id="Username" placeholder="Enter Your Username">
+            Contact No.<input type="text" name="" id="PhoneNumber" placeholder="Your Contact Number">
+        </div>
+        <div>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female" value="female">
+        </div>
+        <div>
+            <label for="rank"></label>
+            Your Rank <input type="number" name="rank" id="rank"> Exam
+            <select name="Rank" id="">
+                <option value="JEE">JEE</option>
+                <option value="JEE">ILETS</option>
+                <option value="JEE adv">JEE Adv</option>
+            </select>
+        </div>
+
+        <div>
+            Select Your Country
+            <select name="Country">
+                <option value="india">India</option>
+                <option value="USA">USA</option>
+                <option value="Engalnd">England</option>
+                <option value="China">China</option>
+                <option value="Japan">Japan</option>
+            </select>
+        </div>
+
+        <div><label for="pincode"></label>
+        Pincode : <input type="number" name="pincode" id="pincode"> </div>
+    
+        <div>
+            <input type="checkbox" name="terms and conditions" id="t&c" value="yes"> I've read all the terms ans
+            conditions
+            <label for="t&c"></label>
+        </div>
+
+        <div>
+            <label for="comment">Enter your comment</label> <br>
+            <textarea name="comment" id="comment" rows="4" cols="50"></textarea>
+        </div>
+
+        <button>Submit</button>
+
+    </form>
+</body>
+
+</html>

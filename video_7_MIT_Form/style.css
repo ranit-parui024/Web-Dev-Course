@@ -1,0 +1,13 @@
+body{
+    background-color: bisque;
+}
+button{
+    background-color: blue;
+    color: aliceblue;
+}
+video{
+    display: inline;
+}
+h1{
+    display: inline;
+}
