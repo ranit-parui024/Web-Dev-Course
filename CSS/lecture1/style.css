@@ -1,0 +1,29 @@
+p{
+    text-align: left;
+    color: rgb(233, 240, 238);
+    border: 2px solid rgb(55, 206, 226);
+    box-sizing: border-box;
+    width: 560px;
+    height: auto;
+    background-color: rgb(21, 53, 53);
+
+    font-family:'Courier New', Courier, monospace
+
+}
+
+h1{
+    text-align: center;
+    color: aqua;
+    text-decoration: underline;
+    font-weight: 500;
+}
+*{
+    background-color: rgb(34, 31, 31);
+}
+
+nav ul li{
+    overflow: hidden;
+    text-align: center;
+    list-style: none;
+    padding: 30px;
+}
