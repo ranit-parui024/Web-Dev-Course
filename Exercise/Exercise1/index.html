@@ -4,66 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(56, 53, 53);
+        }
+
+        .card {
+            background-color: rgb(123, 212, 120);
+            width: 344px;
+            height: 444px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+
+        .image {
+            padding: 5px;
+        }
+
+        .image img {
+            border-radius: 10px;
+        }
+        
+
+        .content{
+            font-family: 'Times New Roman', Times, serif;
+            position: relative;
+            padding: 10px;
+        }
+
+        .capsules span{
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 4px;
+        }
+
+        .capsules {
+            padding-left: 70px;
+            font-size: 13px;
+        }
+    </style>
 </head>
-<style>
-    * {
-
-        background-color: rgb(34, 32, 32);
-    }
-
-    ul {
-        display: flex;
-
-    }
-
-    nav ul li {
-        color: aqua;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        list-style: none;
-        padding: 30px;
-
-    }
-
-    div h1 {
-        color: rgb(37, 209, 225);
-        font-family: 'Times New Roman', Times, serif;
-
-
-    }
-    .box{
-        color: rgb(229, 247, 247);
-        width: auto;
-        height: auto;
-        border: 2px solid rgb(44, 211, 223);
-        position: relative;
-        top: 21px;
-    }
-</style>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
-    </header>
 
-    <div id="name">
-        <h1>Ranit Parui</h1>
-    </div>
-
-    <div class="box">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis modi exercitationem magnam distinctio saepe
-        deserunt minus deleniti quibusdam sint dolore explicabo labore minima incidunt possimus fuga nulla laboriosam,
-        assumenda amet neque ex. Velit, quasi tempore?
-    </div>
-
-
-    <footer></footer>
 </body>
+<div class="card">
+    <div class="image">
+        <img width="334px
+        " src="https://images.pexels.com/photos/518485/pexels-photo-518485.jpeg?cs=srgb&dl=pexels-eberhardgross-518485.jpg&fm=jpg"
+            alt="">
+    </div>
+
+    <div class="capsules">
+            <span>Home</span> <span>About</span> <span>Contact Us</span>
+    </div>
+
+    <div class="content">
+        <h2>Dream Lake</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi nam odit, id earum ex assumenda excepturi
+            pariatur, enim sint esse veniam obcaecati aliquam.</p>
+    </div>
+</div>
 
 </html>
