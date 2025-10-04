@@ -1,0 +1,61 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(15, 22, 23);
+    font-family: sans-serif;
+    color: antiquewhite;
+    line-height: 1.6;   
+}
+.main-container{
+    padding: 40px;
+    display: grid;
+    max-width: 1500px;
+    grid-template-columns: 400px 1fr ;
+    gap: 50px;
+}
+.sidebar{
+    border-radius: 27px;
+    height: 90vh;
+    background-color: rgb(27, 42, 46);
+    border-left: 2px solid rgb(107, 106, 106) ;
+}
+.main_content{
+    border-radius: 27px;
+    height: 90vh;
+    background-color: rgb(27, 42, 46);
+    border-left: 2px solid rgb(107, 106, 106) ;
+}
+
+/* Profile Section */
+.profile{
+        padding-top: 27px;
+        text-align: center;
+}
+.profile img{
+    height: 121px;
+    border-radius: 50%;
+    border-bottom: 1px solid rgb(113, 204, 218);
+}
+.profile h2{
+    font-size: 30px;
+    font-weight: 800;
+    color: aliceblue;
+}
+.profile span{
+    border: 2px solid #141410;
+    border-radius: 16px;
+    padding: 7px;
+    background-color: black;
+    color: aqua;
+    display: inline-block;
+}
+
+/* Contact Section */
+.contact{
+    margin-top: 9px;
+    border-top: 1px solid rgb(57, 83, 91);
+    padding: 20px;
+}

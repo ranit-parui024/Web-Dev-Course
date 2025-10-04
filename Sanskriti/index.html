@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanskriti Homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #D2B48C; /* Tan background */
+            background-image: url('https://www.transparenttextures.com/patterns/fabric-of-squares.png');
+        }
+        .font-cinzel {
+            font-family: 'Cinzel', serif;
+        }
+        .header-bg {
+            background-color: #9a8965; /* Dark Blue */
+        }
+        header img{
+            width: 160px;
+        }
+        .card-bg {
+             background-color: #3B4B70; /* Lighter Blue */
+        }
+        .icon-card-bg {
+            background-color: #C85A5A; /* Terracotta Red */
+        }
+        .home-btn-bg {
+            background-color: #F5E8C7;
+            color: #283550;
+        }
+        .header-nav a:not(.home-btn-bg) {
+             color: #F5E8C7;
+        }
+        .card-border {
+            border: 2px solid #F5E8C7;
+        }
+        .icon-card-border {
+             border: 2px solid #F5E8C7;
+        }
+        .decorative-corner {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='%23F5E8C7'%3E%3Cpath d='M0 0 H50 A50 50 0 0 1 0 50 V0 Z'/%3E%3Cpath d='M20 20 H40 A20 20 0 0 1 20 40 V20 Z'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        /* Simple Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 100; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #3B4B70;
+            color: #F5E8C7;
+            margin: auto;
+            padding: 2rem;
+            border: 2px solid #F5E8C7;
+            border-radius: 0.5rem;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+        }
+        .modal-close {
+            color: #F5E8C7;
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="text-white p-4 sm:p-8">
+
+    <div class="max-w-7xl mx-auto">
+
+        <!-- Header -->
+        <header class="header-bg rounded-lg shadow-lg p-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="Sanskriti_Logo.png" alt="Sanskriti Logo">
+            </a>
+            <nav class="hidden md:flex items-center space-x-6 text-lg header-nav">
+                <a href="index.html" class="home-btn-bg px-4 py-2 rounded-md font-semibold">Home</a>
+                <a href="#" class="nav-link hover:text-yellow-300 transition duration-300" data-section="Dashboard">Dashboard</a>
+                <a href="#" class="nav-link hover:text-yellow-300 transition duration-300" data-section="About Us">About Us</a>
+                <a href="#" class="nav-link hover:text-yellow-300 transition duration-300" data-section="Notifications">Notifications</a>
+            </nav>
+            <div class="flex items-center">
+                <a href="#" id="profile-link" class="flex items-center text-[#F5E8C7] hover:text-yellow-300 transition duration-300">
+                    <svg class="h-8 w-8 rounded-full border-2 border-[#F5E8C7] p-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                    <span class="hidden lg:inline ml-2 text-lg">Profile</span>
+                </a>
+                 <button id="mobile-menu-btn" class="md:hidden ml-4 text-[#F5E8C7]">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Icon Navigation -->
+        <div class="card-bg mt-6 p-6 rounded-lg shadow-lg" style="background-image: url('https://www.transparenttextures.com/patterns/paisley.png'); background-blend-mode: overlay; background-color: #3b4b70; background-size: 300px;">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Quizzes -->
+                <a href="quizzes.html" class="icon-card-bg icon-card-border rounded-lg p-4 text-center flex flex-col items-center justify-center aspect-square transform hover:scale-105 transition-transform duration-300 cursor-pointer shadow-md">
+                    <svg class="h-12 w-12 mb-2 text-[#F5E8C7]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <span class="font-semibold text-lg text-[#F5E8C7]">Quizzes</span>
+                </a>
+                <!-- Games -->
+                <div id="games-section" class="icon-card-bg icon-card-border rounded-lg p-4 text-center flex flex-col items-center justify-center aspect-square transform hover:scale-105 transition-transform duration-300 cursor-pointer shadow-md">
+                   <svg class="h-12 w-12 mb-2 text-[#F5E8C7]" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11.5 6a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM8 8a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-2.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+                        <path d="M2.5 1A1.5 1.5 0 1 0 1 2.5 1.5 1.5 0 0 0 2.5 1zM15 2.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zM12.5 15a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zM1 12.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                   </svg>
+                    <span class="font-semibold text-lg text-[#F5E8C7]">Games</span>
+                </div>
+                <!-- Social Media/Blogs -->
+                <a href="social.html" class="icon-card-bg icon-card-border rounded-lg p-4 text-center flex flex-col items-center justify-center aspect-square transform hover:scale-105 transition-transform duration-300 cursor-pointer shadow-md">
+                    <svg class="h-12 w-12 mb-2 text-[#F5E8C7]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                    <span class="font-semibold text-lg text-[#F5E8C7]">Social Media/Blogs</span>
+                </a>
+                <!-- Art Gallery -->
+                <a href="art_gallery.html" class="icon-card-bg icon-card-border rounded-lg p-4 text-center flex flex-col items-center justify-center aspect-square transform hover:scale-105 transition-transform duration-300 cursor-pointer shadow-md">
+                    <svg class="h-12 w-12 mb-2 text-[#F5E8C7]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547a2 2 0 00-.547 1.806l.477 2.387a6 6 0 00.517 3.86l.158.318a6 6 0 00.517 3.86l2.387.477a2 2 0 001.806-.547a2 2 0 00.547-1.806l-.477-2.387a6 6 0 00-.517-3.86l-.158-.318a6 6 0 01-.517-3.86l-2.387-.477a2 2 0 01-.547-1.806zM15 5.172a2 2 0 00-1.414-.586l-2.086.521a6 6 0 00-3.464 3.464l-.521 2.086a2 2 0 00.586 1.414 2 2 0 001.414.586l2.086-.521a6 6 0 003.464-3.464l.521-2.086a2 2 0 00-.586-1.414zM4 15c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2z"></path></svg>
+                    <span class="font-semibold text-lg text-[#F5E8C7]">Art Gallery</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Topic of the week -->
+            <div class="lg:col-span-2 card-bg card-border rounded-lg shadow-lg p-6 relative">
+                 <div class="decorative-corner top-0 left-0"></div>
+                 <div class="decorative-corner top-0 right-0 transform scale-x-[-1]"></div>
+
+                <h2 class="text-sm font-semibold uppercase tracking-wider text-[#F5E8C7]">Topic of the Week:</h2>
+                <h3 class="text-3xl font-cinzel font-bold mt-1 text-[#F5E8C7]">The Indus Valley Civilization</h3>
+
+                <div class="mt-4">
+                    <img src="https://images.unsplash.com/photo-1582510214392-f02888939c32?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Indus Valley Civilization" class="rounded-lg w-full h-auto object-cover border-2 border-[#F5E8C7]">
+                </div>
+
+                <p class="mt-4 text-lg text-[#F5E8C7]">
+                    Explore the ancient urban planning, crafts, and culture of the world's oldest civilizations.
+                </p>
+
+                <div class="mt-6 border-t-2 border-[#F5E8C7] pt-4">
+                     <p class="text-[#F5E8C7]"><span class="font-bold">MAY 17:</span> Bhagavad Gita is India!</p>
+                </div>
+                 <div class="decorative-corner bottom-0 left-0 transform scale-y-[-1]"></div>
+                 <div class="decorative-corner bottom-0 right-0 transform scale-x-[-1] scale-y-[-1]"></div>
+            </div>
+
+            <!-- Daily Fun Facts -->
+            <div class="space-y-4">
+                 <h2 class="text-2xl font-cinzel font-bold text-center text-[#283550]">Daily Fun Facts</h2>
+                 <!-- Fact 1 -->
+                 <div class="card-bg card-border rounded-lg p-4 shadow-md transform hover:-translate-y-1 transition-transform duration-300">
+                    <p class="font-bold text-[#F5E8C7]">MAY 18:</p>
+                    <p class="text-[#F5E8C7]">Did you know? The number 'zero' invented in India!</p>
+                 </div>
+                 <!-- Fact 2 -->
+                 <div class="card-bg card-border rounded-lg p-4 shadow-md transform hover:-translate-y-1 transition-transform duration-300">
+                    <p class="font-bold text-[#F5E8C7]">MAY 17:</p>
+                    <p class="text-[#F5E8C7]">Bhagavad Gita is part the epic Mahabharata</p>
+                 </div>
+                 <!-- Fact 3 -->
+                 <div class="card-bg card-border rounded-lg p-4 shadow-md transform hover:-translate-y-1 transition-transform duration-300">
+                     <p class="font-bold text-[#F5E8C7]">MAY 17:</p>
+                    <p class="text-[#F5E8C7]">epic Mahabharata</p>
+                 </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Modal for Popups -->
+    <div id="info-modal" class="modal">
+        <div class="modal-content relative">
+            <span id="modal-close-btn" class="modal-close">&times;</span>
+            <h2 id="modal-title" class="text-2xl font-cinzel font-bold mb-4">Section Clicked</h2>
+            <p id="modal-text">This section is under construction. Please check back later!</p>
+        </div>
+    </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.getElementById('info-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalText = document.getElementById('modal-text');
+        const closeModalBtn = document.getElementById('modal-close-btn');
+
+        const showModal = (title) => {
+            modalTitle.textContent = title;
+            modal.style.display = 'flex';
+        };
+
+        const hideModal = () => {
+            modal.style.display = 'none';
+        };
+
+        closeModalBtn.addEventListener('click', hideModal);
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                hideModal();
+            }
+        });
+        
+        document.getElementById('games-section').addEventListener('click', () => showModal('Games'));
+        
+        document.getElementById('profile-link').addEventListener('click', (e) => {
+            e.preventDefault();
+            showModal('Profile');
+        });
+        
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                showModal(e.target.dataset.section);
+            });
+        });
+
+        // Basic mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const nav = document.querySelector('.header-nav');
+        mobileMenuBtn.addEventListener('click', () => {
+             // A proper mobile menu would require more structural changes.
+             // For now, this is a placeholder alert.
+             showModal('Mobile Menu');
+        });
+    });
+</script>
+
+</body>
+</html>

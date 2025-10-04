@@ -1,0 +1,16 @@
+div{
+    height: 200px;
+    width: 500px;
+    background-color: rgb(151, 242, 240);
+    /* border-width: 5px;
+    border-style: dotted;
+    border-color: black; */
+    border: 5px dotted black;
+    border-left: 5px dashed red;
+    margin: 14px;
+    border-radius: 20px;
+    padding: 13px;
+}
+h1{
+   border: 9px dashed green;
+}

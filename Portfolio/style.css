@@ -12,7 +12,14 @@ nav{
     justify-content: space-around;
     align-items: center;
     height: 65px;
-    background-color: #13d0e566;;
+    background-color: #0b758166;;
+}
+h2{
+    font-family: "Google Sans Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+      width: 133%;
 }
 nav ul{
     display: flex;
@@ -40,7 +47,7 @@ nav ul li a:hover{
 .firstsection{
     display: flex;
     justify-content: space-around;
-    margin: 80px 0px;
+    margin: 150px 0px;
     font-size: x-large;
 }
 .rightsection img{
@@ -55,7 +62,7 @@ nav ul li a:hover{
     font-size: xx-large;
     margin: 64px 64px
 }
-.leftsection div:nth-child(1){
+.leftsection > div{
     display: inline;
 
 }
@@ -71,3 +78,55 @@ nav ul li a:hover{
     color: rgb(33, 134, 236);
 }
 
+.secondsection{
+    max-width: 80vw;
+    margin: auto;
+    height: 80vw;
+}
+.secondsection h1{
+    font-size: 2rem;
+}
+
+main hr{
+        border: 0;
+    height: 2px;
+    background: #00caff;
+    margin: 40px 84px;
+}
+
+.secondsection span{
+    color: grey;
+}
+.secondsection .box{
+    background: white;
+    height: 2px;
+    width: 80vw;
+    margin: 71px 0px;
+    display: flex;
+}
+.secondsection .vertical{
+    height: 50px;
+    width: 1px;
+    background-color: white;
+    margin: 0px 61px;
+}
+.vertical .vertical-title{
+        position: relative;
+    top: -17px;
+    left: -15px;
+}     
+
+
+
+.vertical .top-img{
+    width: 55px;
+    position: relative;
+    top: -66px;
+    left: -26px;
+}
+.vertical .top-img2{
+    width: 50px;
+    position: relative;
+    top: -75px;
+    left: -26px;
+}

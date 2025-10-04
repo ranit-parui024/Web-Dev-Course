@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+h1{
+    border: 9px dashed rgb(65, 220, 26);
+    color: rgb(232, 173, 45);
+    display: flex;
+    justify-content: center;
+}
+body{
+    background-color: rgb(44, 63, 69);
+}
+div{
+    background-color: rgb(195, 153, 250);
+    padding: 30px;
+    border: 2px solid black;
+    border-left: 1px;
+    border-left-color: azure;
+    border-bottom-color: azure;
+    border-radius: 30px;
+    margin: 22px;
+    height: 200px;
+    width: 500px;
+    
+}
+
+button{
+        background-color: blue;
+    color: aliceblue;
+    border-radius: 14px;
+    padding: 9px;
+    border-bottom-color: white;
+    border-left: 3px white;
+    margin-left: 244px;
+}
